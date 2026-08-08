@@ -3,7 +3,7 @@ Data cleaning and exploratory analysis on global Airbnb listings using Python &a
 
 ## 🔍 Key Research Questions
 
-1. **Country Representation & Pricing:** Which countries are most represented on the platform, and how does the median price vary among them?
+1. **Country Representation & Pricing:** Which countries are most represented on the platform, and how does the average price vary among them?
  
 2. **Amenity Premium:** What is the average price difference for listings offering premium amenities (e.g., Pools, Pet-Friendly) compared to standard properties?
 
