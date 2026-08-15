@@ -1,0 +1,35 @@
+Final Remarks
+
+This exploratory data analysis project investigated pricing patterns, market composition, and listing characteristics across Airbnb properties. 
+By combining data cleaning pipelines with descriptive statistics, the key findings are:
+
+1. Market Concentration & Geographic Price Disparity
+Listing Distribution: India (2,779), Italy (1,187), and Greece (889) represent the highest listing volumes on the platform.
+Pricing Divergence: European markets (Italy at 31,636 and Greece at 31,432 avg price) command more than 4x the daily rates seen in Asian markets like 
+India (7,537 avg price).
+
+2. Amenities (Pool & Pet-Friendly Policies)
+Properties offering amenities like swimming pools or pet-friendly accommodations average 21,110 per night, compared to 13,608 for standard listings.
+This represents a +55.1% price (+7,502 in absolute), indicating willingness to pay for flexibility features.
+
+3. Review Ratings Do Not Drive Daily Rates
+The correlation between numerical review scores and listing price is virtually nonexistent (r = 0.079).
+While listings with lower ratings (< 4.0) initially appear to have higher average prices (25,026), median price comparisons (9,000–9,700) prove this is 
+heavily distorted by extreme luxury outliers in a small sample. Daily pricing is fundamentally set by location and listing capacity, not user review scores.
+
+4. Host Concentration & Competitive Volume Strategy
+Single-property hosts dominate the platform supply (69.7% share vs. 30.3% for multi-property hosts).
+Despite multi-hosts owning premium portfolio assets that push up their average prices (18,931 vs. 17,161), their median prices are slightly lower 
+(7,942 vs. 8,211), suggesting a competitive pricing strategy.
+
+5. Group Economies of Scale vs. Large Estate Premiums
+Economies of Scale: Booking listings for 3–6 guests delivers maximum per-person efficiency, reducing the median cost per guest by 30% to 40% compared to couples.
+Luxury Inflection Point: Once listings exceed 4 bedrooms, the cost-per-guest trend reverses, climbing above 2,500–3,100 as listings shift from residential spaces
+into premium villas and estates.
+
+Technical Implementation Highlights
+ - Data Cleaning: Whitespace stripping on categorical text columns, converted mixed-type ratings (`'New'` string to `NaN`), and imputed missing values in check-out
+schedules.
+- Extracted boolean tags from string-formatted amenities, segmented hosts via frequency mapping, created binned rating tiers, and generated per-guest cost 
+efficiency metrics.
+- Aggregation: Utilized both mean and median metrics to ensure distributions and outlier listings did not compromise business conclusions.
